@@ -106,6 +106,8 @@ pip install requirements.txt
 ```
 If require run independent programs 
 
+python get_data.py (make sure you remove commented syntax in the program to see result)
+
 Note : if you run load_data.py it will create target .csv file in that case dvc command will fail 
 
 so delete generated files before running below command 
