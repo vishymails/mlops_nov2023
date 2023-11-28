@@ -53,3 +53,11 @@ copy winequality.csv to data_given folder
    40   git branch -M main
    41    git push -u origin main
 ```
+
+
+```
+update params.yaml
+
+git add . && git commit -m "added params.yaml"
+git push -u origin main
+```
