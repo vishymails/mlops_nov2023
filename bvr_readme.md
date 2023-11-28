@@ -29,6 +29,9 @@ python template.py
 ```
 
 ```
+download winequality.csv file from https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
+
+
 mkdir data_given
 
 copy winequality.csv to data_given folder 
