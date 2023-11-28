@@ -44,3 +44,9 @@ copy winequality.csv to data_given folder
    
 ```
 
+```
+ 38  git add . && git commit -m "updated Read me file"
+   39  git remote add origin https://github.com/vishymails/mlops_nov2023.git
+   40   git branch -M main
+   41    git push -u origin main
+```
