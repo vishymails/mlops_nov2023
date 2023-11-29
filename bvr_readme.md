@@ -115,3 +115,22 @@ so delete generated files before running below command
 
 dvc repro
 ```
+
+
+``` update split_data stage in dvc.yaml
+
+split_data :
+    cmd : python src/split_data.py --config=params.yaml
+    deps : 
+      - src/split_data.py
+      - data/raw/winequality.csv
+    outs :
+      - data/processed/train_winequality.csv
+      - data/processed/test_winequality.csv
+
+CREATE SPLIT_DATA.PY
+```
+
+``` 
+
+ ```
