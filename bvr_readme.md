@@ -218,3 +218,30 @@ git add . && git commit -m "Tracker added"
   103  dvc metrics diff
   104  dvc metrics show
 ```
+
+
+```
+Create setup.py 
+
+from setuptools import setup, find_packages
+
+setup(
+    name = "src",
+    version="0.0.1",
+    description="Case study project for Oracle India",
+    author="BVR", 
+    packages=find_packages(),
+    license="MIT"
+
+)
+
+```
+
+```
+118  tox
+  119  tox -r 
+  120  pip install -e .
+  121  pip freeze
+  122  python setup.py sdist bdist_wheel
+  123  history
+```
