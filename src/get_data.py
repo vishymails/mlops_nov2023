@@ -15,7 +15,7 @@ def get_data(config_path) :
     config = read_params(config_path)
 
     #reading param file as an argument
-    #print(config)
+    print(config)
 
     data_path = config["data_source"]["s3_source"]
 
