@@ -137,5 +137,58 @@ CREATE SPLIT_DATA.PY
    70  git push origin main
  ```
 
+```
+   83  mkdir report
+   84  touch report/params.json
+   85  touch report/scores.json
+   
+```
 
- 
+```
+add to train_and_evaluate in dvc.yaml
+
+metrics :
+      - report/scores.json :
+          cache : false
+      - report/params.json :
+          cache : false
+
+
+```
+
+```
+FINAL COPY 
+
+
+train_and_evaluate :
+    cmd : python src/train_and_evaluate.py --config=params.yaml
+    deps :
+      - data/processed/train_winequality.csv
+      - data/processed/test_winequality.csv
+      - src/train_and_evaluate.py
+    params :
+      - estimators.ElasticNet.params.alpha
+      - estimators.ElasticNet.params.l1_ratio
+    metrics :
+      - report/scores.json :
+          cache : false
+      - report/params.json :
+          cache : false
+      
+    outs :
+      - saved_models/model.joblib
+```
+
+```
+   86  dvc repro
+   
+```
+
+```
+   88  dvc params diff
+   89  dvc metrics show
+   91  dvc metrics diff
+   92  git add . && git commit -m "Tracker added"
+   93  git push origin main
+
+```
