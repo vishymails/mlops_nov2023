@@ -192,3 +192,29 @@ train_and_evaluate :
    93  git push origin main
 
 ```
+
+
+``` Update params.yaml file 
+
+estimators :
+  ElasticNet :
+    params :
+      #alpha : 0.88
+      #l1_ratio : 0.11
+      alpha : 0.9
+      l1_ratio : 0.4
+
+```
+
+```
+git add . && git commit -m "Tracker added"
+   96  git push origin main
+   97  git push origin main
+   98  dvc repro
+   99  dvc metrics diff
+  100  dvc metrics show
+  101  git add . && git commit -m "Tracker added"
+  102  git push origin main
+  103  dvc metrics diff
+  104  dvc metrics show
+```
