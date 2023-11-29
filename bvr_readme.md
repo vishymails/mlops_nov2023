@@ -245,3 +245,34 @@ setup(
   122  python setup.py sdist bdist_wheel
   123  history
 ```
+
+```
+TOX.INI UPDATION
+
+[tox]
+envlist = py38
+; skipdist = True
+
+[testenv]
+deps = -rrequirements.txt
+commands = 
+    pytest -v
+
+
+    
+
+129  pip install -r requirements.txt
+  130  tox
+
+```
+
+```
+  131  pip install jupyter-lab
+  132  pip install jupyterlab
+
+TRY ALL STATEMENTS IN NOTEBOOK1.IPYNB
+
+
+  133  jupyter-lab notebooks/
+  134  history
+```
