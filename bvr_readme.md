@@ -259,7 +259,7 @@ commands =
     pytest -v
 
 
-    
+
 
 129  pip install -r requirements.txt
   130  tox
@@ -267,7 +267,7 @@ commands =
 ```
 
 ```
-  131  pip install jupyter-lab
+ 
   132  pip install jupyterlab
 
 TRY ALL STATEMENTS IN NOTEBOOK1.IPYNB
@@ -276,3 +276,63 @@ TRY ALL STATEMENTS IN NOTEBOOK1.IPYNB
   133  jupyter-lab notebooks/
   134  history
 ```
+
+
+```
+update test_config.py
+
+
+import pytest
+
+
+class NotInRange(Exception) :
+    def __init__(self, message="value not in given range - by Oracle India") :
+        self.message = message
+        super().__init__(self.message)
+
+
+def test_generic1() :
+    a = 15
+    if a not in range(10, 20) :
+        raise NotInRange
+
+def test_generic2() :
+    a = 5
+    with pytest.raises(NotInRange) :
+        if a not in range(10, 20) :
+            raise NotInRange
+
+
+def test_generic() :
+    a = 30
+    b = 40
+    assert a != b
+
+
+```
+
+```
+pytest -v
+```
+
+```
+Linting using Flake 8 
+
+update tox.ini 
+
+commands = 
+    # stop the build if there are python syntax errors or undefined names
+    flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    #exit zero treats all errors as warnings. The github editor is 127 chars wide 
+    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    
+    pytest -v
+
+
+```
+
+```
+tox 
+```
+
