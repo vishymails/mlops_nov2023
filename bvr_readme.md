@@ -336,3 +336,21 @@ commands =
 tox 
 ```
 
+```
+149  git add . && git commit -m "NOTEBOOK ADDED" && git push origin main
+  150  mkdir prediction_service
+  151  mkdir -p prediction_service/model
+  152  mkdir webapp
+  153  touch app.py
+  154  touch prediction_service/__init__.py
+  155  touch prediction_service/prediction.py
+  156  mkdir -p webapp/static/css
+  157  mkdir -p webapp/static/script
+  158  touch webapp/static/css/main.css
+  159  touch webapp/static/script/index.js
+  160  touch webapp/templates/index.html
+  161  mkdir  webapp/templates
+  162  touch webapp/templates/index.html
+  163  touch webapp/templates/404.html
+  164  touch webapp/templates/base.html
+```
