@@ -133,8 +133,7 @@ CREATE SPLIT_DATA.PY
 
 
 ``` 
-   69  git add . && git commit -m "SPLIT_DATA STAGE ADDED"
-   70  git push origin main
+   69  git add . && git commit -m "SPLIT_DATA STAGE ADDED" && git push origin main
  ```
 
 ```
