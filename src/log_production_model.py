@@ -53,7 +53,7 @@ def log_production_model(config_path):
             )        
 
 
-    loaded_model = mlflow.pyfunc.load_model(logged_model)
+    loaded_model = mlflow.pyfunc.load_model(logged_model) #altered
     
     model_path = config["webapp_model_dir"] #"prediction_service/model"
 
