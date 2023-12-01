@@ -353,3 +353,19 @@ tox
   163  touch webapp/templates/404.html
   164  touch webapp/templates/base.html
 ```
+
+
+
+
+
+```
+for ml flow 
+
+
+202  pip install -r requirements.txt
+  203  mlflow
+  204  mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts --host 0.0.0.0 -p 1234
+
+  git add . && git commit -m "mlflow ADDED" && git push origin main
+  205  history
+```
